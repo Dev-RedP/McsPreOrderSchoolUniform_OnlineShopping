@@ -27,12 +27,12 @@ public class PreOrderUniform {
         System.out.println("Stock Quantity: " + stockQuantity);
     }
 
-    public static void main(String[] args) {
+    public static <preOrderUniformMain> void preOrderUniform(String[] args) {
 
         Scanner uniform = new Scanner(System.in);
 
         PreOrderUniform obj = new PreOrderUniform();
-        obj.PreOrderUniform(uniform);
+        obj.notify();
 
         uniform.close();
     }
