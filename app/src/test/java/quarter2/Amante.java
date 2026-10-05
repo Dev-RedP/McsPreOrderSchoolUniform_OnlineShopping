@@ -7,7 +7,7 @@ public class Amante {
     public void printMyProfile() {
         String myName = "Micha";
         String petName = "Brownie";
-        String favFood = "Sinigang";
+        String favFood = "Adobo";
         int myAge = 17;
 
         System.out.println("--- MY DIGITAL PROFILE ---");
