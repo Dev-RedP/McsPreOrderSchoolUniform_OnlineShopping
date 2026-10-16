@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PreOrderUniform {
 
-    public void PreOrderUniform(Scanner uniform) {
+    public void preorderuniform(Scanner uniform) {
 
         String uniformType;
         String uniformSize;
@@ -27,13 +27,4 @@ public class PreOrderUniform {
         System.out.println("Stock Quantity: " + stockQuantity);
     }
 
-    public static <preOrderUniformMain> void preOrderUniform(String[] args) {
-
-        Scanner uniform = new Scanner(System.in);
-
-        PreOrderUniform obj = new PreOrderUniform();
-        obj.notify();
-
-        uniform.close();
-    }
 }
