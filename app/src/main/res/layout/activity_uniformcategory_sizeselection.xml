@@ -1,173 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UNIFORMCATEGORY_SIZESELECTION"
-    tools:ignore="ExtraText">
+    android:fillViewport="true">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="662dp"
-        android:layout_height="1055dp"
-        android:src="@drawable/untitled_design__1_"
-        tools:ignore="ContentDescription,MissingConstraints,VisualLintBounds"
-        tools:layout_editor_absoluteX="-101dp"
-        tools:layout_editor_absoluteY="-120dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="221dp"
-        android:layout_height="182dp"
-        android:src="@drawable/male_longsleeve"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.086"
-        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+        <!-- EACH ONE ONLY CONNECTED TO PARENT - NOT TO EACH OTHER -->
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="219dp"
-        android:layout_height="169dp"
-        android:src="@drawable/female_vest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087"
-        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/untitled_design__1_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="178dp"
-        android:layout_height="169dp"
-        android:src="@drawable/male_necktie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.872"
-        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="181dp"
+            android:layout_height="218dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/male_longsleeve"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.071"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.143"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/click"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:foreground="@drawable/choose_size__4_"
-        android:text="CLICK"
-        app:cornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301"
-        tools:ignore="HardcodedText,MissingConstraints,DuplicateSpeakableTextCheck,TextContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="181dp"
+            android:layout_height="218dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/female_vest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.142"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:foreground="@drawable/choose_size__4_"
-        android:text="CLICK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301"
-        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="181dp"
+            android:layout_height="218dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/female_blouse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.543"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:contentDescription="TODO"
-        android:foreground="@drawable/choose_size__4_"
-        android:text="CLICK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976"
-        tools:ignore="HardcodedText,MissingConstraints,DuplicateSpeakableTextCheck,TextContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="181dp"
+            android:layout_height="218dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/female_skirt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.927"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.547"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="229dp"
-        android:layout_height="199dp"
-        android:contentDescription="TODO"
-        android:src="@drawable/female_blouse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504"
-        tools:ignore="ContentDescription,HardcodedText,MissingConstraints,ImageContrastCheck" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="222dp"
+            android:layout_height="180dp"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:src="@drawable/male_necktie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.912"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="110dp"
-        android:layout_height="189dp"
-        android:src="@drawable/female_skirt"
-        tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="351dp" />
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="262dp"
+            android:layout_height="87dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/mcs_uniforms_drawable" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:foreground="@drawable/choose_size__4_"
-        android:text="CLICK"
-        android:textColor="#FFB74D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
-        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="122dp"
-        android:layout_height="48dp"
-        android:autofillHints=""
-        android:foreground="@drawable/choose_size__4_"
-        android:importantForAutofill="no"
-        android:text="CLICK"
-        app:cornerRadius="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
-        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="278dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:fontFamily="@font/adlam_display"
-        android:inputType="text"
-        android:selectAllOnFocus="false"
-        android:singleLine="false"
-        android:text="MCS UNIFORM SIZE SELECTION"
-        tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints,TextSizeCheck,VisualLintSystemUi"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="2dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
