@@ -166,13 +166,13 @@
                     android:id="@+id/txtForgotPassword"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:gravity="end|center_vertical"
-                    android:text="Forgot Password?"
-                    android:textColor="#EE4D2D"
-                    android:textSize="14sp"
+                    android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true"
-                    android:background="?attr/selectableItemBackground" />
+                    android:gravity="end|center_vertical"
+                    android:text="Forgot Password?"
+                    android:textColor="#FF0000"
+                    android:textSize="14sp" />
 
                 <!-- LOGIN BUTTON -->
                 <Button
@@ -180,12 +180,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:layout_marginTop="12dp"
-                    android:backgroundTint="#EE4D2D"
+                    android:backgroundTint="#03A9F4"
+                    android:stateListAnimator="@null"
                     android:text="SIGN IN"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:stateListAnimator="@null" />
+                    android:textStyle="bold" />
 
                 <!-- REGISTER -->
                 <LinearLayout
@@ -211,7 +211,7 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:text="Create an account"
-                        android:textColor="#EE4D2D"
+                        android:textColor="#F0001C"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         tools:ignore="TouchTargetSizeCheck" />
