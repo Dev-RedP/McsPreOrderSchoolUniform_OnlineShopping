@@ -157,7 +157,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="#FF4500"
+                    android:backgroundTint="#2196F3"
                     android:text="UPDATE ORDER"
                     android:textColor="#FFFFFF"
                     android:textSize="15sp"
