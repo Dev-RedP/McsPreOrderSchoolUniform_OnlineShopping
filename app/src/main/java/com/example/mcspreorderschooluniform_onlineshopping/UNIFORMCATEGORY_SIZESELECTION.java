@@ -34,7 +34,7 @@ public class UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
         imageView5 = findViewById(R.id.imageView5); // Female Blouse
         imageView6 = findViewById(R.id.imageView6); // Female Skirt
 
-        // Each one bouncy and independent - dont connect each other
+        // Each one bouncy and independent - dont connect each otherA
         imageView2.setOnClickListener(v -> bounceAndGo(v, "Male Longsleeve"));
         imageView3.setOnClickListener(v -> bounceAndGo(v, "Female Vest"));
         imageView4.setOnClickListener(v -> bounceAndGo(v, "Male Necktie"));
