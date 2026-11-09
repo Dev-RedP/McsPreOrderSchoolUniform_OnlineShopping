@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginFeatures"
+            android:name=".loginFeatures"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
