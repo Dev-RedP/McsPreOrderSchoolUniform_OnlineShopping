@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">McsPreOrderSchoolUniform - OnlineShopping</string>
+    <string name="reservation_pickup_schedule">RESERVATION PICK-UP SCHEDULE</string>
+    <string name="reservation_details">Reservation Details</string>
+    <string name="reservation_date">Reservation Date:</string>
+    <string name="pickup_time">Pickup Time:</string>
+    <string name="student_id">Student ID:</string>
+    <string name="pickup_date">Pickup Date:</string>
+    <string name="hint_reservation_date">Enter reservation date</string>
+    <string name="hint_pickup_time">Enter pickup time</string>
+    <string name="hint_student_id">Enter your student ID</string>
+    <string name="hint_pickup_date">Enter pickup date (MM/DD/YYYY)</string>
+    <string name="btn_schedule_pickup">SUBMIT</string>
 </resources>

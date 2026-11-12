@@ -1,6 +1,6 @@
 package com.example.mcspreorderschooluniform_onlineshopping;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class  UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
+public class UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
 
     ImageView imageView2, imageView3, imageView4, imageView5, imageView6;
 
@@ -27,14 +27,14 @@ public class  UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
             return insets;
         });
 
+        // Only uniforms - no buttons
+        imageView2 = findViewById(R.id.imageView2); // Male Longsleeve
+        imageView3 = findViewById(R.id.imageView3); // Female Vest
+        imageView4 = findViewById(R.id.imageView4); // Male Necktie
+        imageView5 = findViewById(R.id.imageView5); // Female Blouse
+        imageView6 = findViewById(R.id.imageView6); // Female Skirt
 
-        imageView2 = findViewById(R.id.imageView2);
-        imageView3 = findViewById(R.id.imageView3);
-        imageView4 = findViewById(R.id.imageView4);
-        imageView5 = findViewById(R.id.imageView5);
-        imageView6 = findViewById(R.id.imageView6);
-
-
+        // Each one bouncy and independent - dont connect each otherA
         imageView2.setOnClickListener(v -> bounceAndGo(v, "Male Longsleeve"));
         imageView3.setOnClickListener(v -> bounceAndGo(v, "Female Vest"));
         imageView4.setOnClickListener(v -> bounceAndGo(v, "Male Necktie"));
@@ -52,6 +52,9 @@ public class  UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
 
         new Handler().postDelayed(() -> {
             Toast.makeText(this, uniformName + " - Medium Selected!", Toast.LENGTH_SHORT).show();
-
+            // Intent is disabled until you create the next page
+            // Intent intent = new Intent(UNIFORMCATEGORY_SIZESELECTION.this, SizeSelectionActivity.class);
+            // intent.putExtra("UNIFORM_NAME", uniformName);
+            // startActivity(intent);
         }, 500);
     } }
