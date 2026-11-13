@@ -4,115 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="#FFFFFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="900dp">
 
-        <!-- EACH ONE ONLY CONNECTED TO PARENT - NOT TO EACH OTHER -->
-
+        <!-- BLUE BACKGROUND -->
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:scaleType="centerCrop"
             android:src="@drawable/untitled_design__1_"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"
+            android:contentDescription="Uniform background"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="ContentDescription" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="181dp"
-            android:layout_height="218dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            android:src="@drawable/male_longsleeve"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.143"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="181dp"
-            android:layout_height="218dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            android:src="@drawable/female_vest"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.93"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.142"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="181dp"
-            android:layout_height="218dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            android:src="@drawable/female_blouse"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.108"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.543"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="181dp"
-            android:layout_height="218dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            android:src="@drawable/female_skirt"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.927"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.547"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="222dp"
-            android:layout_height="180dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            android:src="@drawable/male_necktie"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.912"
-            tools:ignore="SpeakableTextPresentCheck" />
-
+        <!-- MCS UNIFORMS LOGO -->
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="262dp"
             android:layout_height="87dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/mcs_uniforms_drawable"
+            android:scaleType="fitCenter"
+            android:contentDescription="MCS Uniforms logo"
+            android:elevation="4dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/mcs_uniforms_drawable" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- MALE LONG SLEEVE -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="218dp"
+            android:src="@drawable/male_longsleeve"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:contentDescription="Male Long Sleeve"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView3"
+            android:layout_marginTop="115dp" />
+
+        <!-- FEMALE VEST -->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="218dp"
+            android:src="@drawable/female_vest"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:contentDescription="Female Vest"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="115dp" />
+
+        <!-- FEMALE BLOUSE -->
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="218dp"
+            android:src="@drawable/female_blouse"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:contentDescription="Female Blouse"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView6"
+            android:layout_marginTop="365dp" />
+
+        <!-- FEMALE SKIRT -->
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="0dp"
+            android:layout_height="218dp"
+            android:src="@drawable/female_skirt"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:contentDescription="Female Skirt"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="365dp" />
+
+        <!-- MALE NECKTIE -->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="222dp"
+            android:layout_height="180dp"
+            android:src="@drawable/male_necktie"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:focusable="true"
+            android:elevation="4dp"
+            android:contentDescription="Male Necktie"
+            android:layout_marginTop="625dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

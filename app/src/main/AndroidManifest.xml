@@ -11,17 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.McsPreOrderSchoolUniformOnlineShopping">
-        <activity
-            android:name=".loginfeatures"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize"
-            tools:ignore="MissingClass">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Main Activity / Starting Screen -->
         <activity
             android:name=".loginFeatures"
             android:exported="true"
@@ -32,58 +23,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Uniform Category and Size Selection -->
         <activity
             android:name=".UNIFORMCATEGORY_SIZESELECTION"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Customer Order Information -->
         <activity
-            android:name=".Login_Features"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".Customerorderinfo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Processing Order -->
         <activity
-            android:name=".InventoryTracking_ForAdminOnly"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".activity_processingorder"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Reservation Pick-up Schedule -->
+        <activity
+            android:name=".ReservationPickUpSchedule"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
+        <!-- Preloaded Fonts -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".Customerorderinfo"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".loginFeatures"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".activity_processingoder"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".practice"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ReservationPickUpSchedule"
+            android:name=".UNIFORM_SizeandQuantity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
