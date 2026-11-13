@@ -49,7 +49,7 @@
 
             <TextView
                 android:id="@+id/tvTitle"
-                android:layout_width="373dp"
+                android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="4dp"
                 android:gravity="center"
@@ -103,8 +103,11 @@
                     android:layout_marginTop="4dp"
                     android:background="@android:drawable/editbox_background"
                     android:hint="@string/hint_reservation_date"
-                    android:importantForAutofill="no"
+                    android:focusable="true"
+                    android:clickable="true"
                     android:inputType="date"
+                    android:autofillHints="false"
+                    android:cursorVisible="false"
                     android:paddingHorizontal="12dp"
                     android:singleLine="true"
                     android:textColor="#000000"
@@ -114,9 +117,13 @@
                 <TextView
                     android:id="@+id/tvPickupTime"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_marginTop="14dp"
-                    android:text="@string/pickup_time"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:cursorVisible="false"
+                    android:hint="@string/hint_pickup_time"
+                    android:text="@string/pickup_date"
                     android:textColor="#444444"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -163,8 +170,12 @@
 
                 <TextView
                     android:id="@+id/tvPickupDate"
+                    android:hint="@string/hint_pickup_date"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:cursorVisible="false"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_marginTop="14dp"
                     android:text="@string/pickup_date"
                     android:textColor="#444444"
@@ -186,7 +197,6 @@
                     android:textColorHint="#757575"
                     android:textSize="14sp" />
 
-                <!-- Submit Button -->
                 <Button
                     android:id="@+id/btnSchedulePickup"
                     android:layout_width="match_parent"
