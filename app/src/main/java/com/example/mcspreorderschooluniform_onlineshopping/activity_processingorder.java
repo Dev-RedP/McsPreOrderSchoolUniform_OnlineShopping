@@ -1,7 +1,6 @@
 
 package com.example.mcspreorderschooluniform_onlineshopping;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,19 +15,39 @@ public class activity_processingorder extends AppCompatActivity {
     private EditText editOrderStatus;
     private Button btnProcessOrder;
 
-    @SuppressLint("MissingInflatedId")
+    private String selectedSize;
+    private int selectedQuantity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_processingorder);
 
-        // Initialize UI components
         editOrderId = findViewById(R.id.etStudentId);
         editOrderQuantity = findViewById(R.id.editOrderNumber);
         editOrderStatus = findViewById(R.id.editOrderDate);
         btnProcessOrder = findViewById(R.id.btnSubmitOrder);
 
-        // Button click listener
+        // RECEIVE DATA FROM SIZE AND QUANTITY SCREEN
+        selectedSize = getIntent().getStringExtra("SELECTED_SIZE");
+
+        selectedQuantity = getIntent().getIntExtra(
+                "SELECTED_QUANTITY", 1
+        );
+
+        // Automatically display selected quantity
+        editOrderQuantity.setText(String.valueOf(selectedQuantity));
+
+        // Display selected uniform size
+        if (selectedSize != null) {
+            Toast.makeText(
+                    this,
+                    "Selected Size: " + selectedSize +
+                            "\nQuantity: " + selectedQuantity,
+                    Toast.LENGTH_LONG
+            ).show();
+        }
+
         btnProcessOrder.setOnClickListener(v -> {
             processOrder();
         });
@@ -40,35 +59,33 @@ public class activity_processingorder extends AppCompatActivity {
         String quantity = editOrderQuantity.getText().toString().trim();
         String status = editOrderStatus.getText().toString().trim();
 
-        // Check Order ID
         if (orderId.isEmpty()) {
             editOrderId.setError("Order ID is required");
             editOrderId.requestFocus();
             return;
         }
 
-        // Check Quantity
         if (quantity.isEmpty()) {
             editOrderQuantity.setError("Order Quantity is required");
             editOrderQuantity.requestFocus();
             return;
         }
 
-        // Check Status
         if (status.isEmpty()) {
             editOrderStatus.setError("Order Status is required");
             editOrderStatus.requestFocus();
             return;
         }
 
-        // Validate quantity
         int orderQuantity;
 
         try {
             orderQuantity = Integer.parseInt(quantity);
 
             if (orderQuantity <= 0) {
-                editOrderQuantity.setError("Quantity must be greater than zero");
+                editOrderQuantity.setError(
+                        "Quantity must be greater than zero"
+                );
                 editOrderQuantity.requestFocus();
                 return;
             }
@@ -79,7 +96,6 @@ public class activity_processingorder extends AppCompatActivity {
             return;
         }
 
-        // Validate status
         if (!status.equalsIgnoreCase("Processing")
                 && !status.equalsIgnoreCase("Completed")) {
 
@@ -90,14 +106,14 @@ public class activity_processingorder extends AppCompatActivity {
             return;
         }
 
-        // Successful update message
         Toast.makeText(
                 activity_processingorder.this,
-                "Order Updated Successfully!",
+                "Order Updated Successfully!" +
+                        "\nSize: " + selectedSize +
+                        "\nQuantity: " + orderQuantity,
                 Toast.LENGTH_LONG
         ).show();
 
-        // Clear fields
         editOrderId.setText("");
         editOrderQuantity.setText("");
         editOrderStatus.setText("");

@@ -2,6 +2,7 @@
 package com.example.mcspreorderschooluniform_onlineshopping;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,14 +24,12 @@ public class UNIFORM_SizeandQuantity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uniform_sizeand_quantity);
 
-        // Connect XML views
         radioGroupSize = findViewById(R.id.radioGroupSize);
         txtQuantity = findViewById(R.id.txtQuantity);
         btnMinus = findViewById(R.id.btnMinus);
         btnPlus = findViewById(R.id.btnPlus);
         btnDone = findViewById(R.id.btnDone);
 
-        // Minus button
         btnMinus.setOnClickListener(v -> {
             if (quantity > 1) {
                 quantity--;
@@ -38,13 +37,11 @@ public class UNIFORM_SizeandQuantity extends AppCompatActivity {
             }
         });
 
-        // Plus button
         btnPlus.setOnClickListener(v -> {
             quantity++;
             txtQuantity.setText(String.valueOf(quantity));
         });
 
-        // Done button
         btnDone.setOnClickListener(v -> {
 
             int selectedId = radioGroupSize.getCheckedRadioButtonId();
@@ -64,14 +61,18 @@ public class UNIFORM_SizeandQuantity extends AppCompatActivity {
             String selectedSize =
                     selectedRadioButton.getText().toString();
 
-            Toast.makeText(
+            // CONNECT TO PROCESSING ORDER
+            Intent intent = new Intent(
                     UNIFORM_SizeandQuantity.this,
-                    "Selected Size: " + selectedSize +
-                            "\nQuantity: " + quantity,
-                    Toast.LENGTH_LONG
-            ).show();
+                    activity_processingorder.class
+            );
 
-            finish();
+            // Send selected size and quantity
+            intent.putExtra("SELECTED_SIZE", selectedSize);
+            intent.putExtra("SELECTED_QUANTITY", quantity);
+
+            startActivity(intent);
+
         });
     }
 }

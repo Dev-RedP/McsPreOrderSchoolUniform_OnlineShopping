@@ -1,9 +1,9 @@
-
 package com.example.mcspreorderschooluniform_onlineshopping;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.ImageView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,7 +20,7 @@ public class UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
 
         setContentView(R.layout.activity_uniformcategory_sizeselection);
 
-        // Connect ImageViews from XML
+        // Connect ImageViews
         imageView2 = findViewById(R.id.imageView2);
         imageView3 = findViewById(R.id.imageView3);
         imageView4 = findViewById(R.id.imageView4);
@@ -29,7 +29,7 @@ public class UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
         imageView7 = findViewById(R.id.imageView7);
         imageView10 = findViewById(R.id.imageView10);
 
-        // Handle system screen insets
+        // System screen insets
         ViewCompat.setOnApplyWindowInsetsListener(
                 findViewById(R.id.main), (v, insets) -> {
 
@@ -46,34 +46,37 @@ public class UNIFORMCATEGORY_SIZESELECTION extends AppCompatActivity {
                     return insets;
                 });
 
-        // Male Long Sleeve
+        // MALE LONG SLEEVE
         imageView2.setOnClickListener(v ->
-                showSelection("Male Long Sleeve"));
+                openSizeSelection("Male Long Sleeve"));
 
-        // Female Vest
+        // FEMALE VEST
         imageView3.setOnClickListener(v ->
-                showSelection("Female Vest"));
+                openSizeSelection("Female Vest"));
 
-        // Male Necktie
+        // MALE NECKTIE
         imageView4.setOnClickListener(v ->
-                showSelection("Male Necktie"));
+                openSizeSelection("Male Necktie"));
 
-        // Female Blouse
+        // FEMALE BLOUSE
         imageView5.setOnClickListener(v ->
-                showSelection("Female Blouse"));
+                openSizeSelection("Female Blouse"));
 
-        // Female Skirt
+        // FEMALE SKIRT
         imageView6.setOnClickListener(v ->
-                showSelection("Female Skirt"));
+                openSizeSelection("Female Skirt"));
     }
 
-    private void showSelection(String uniformName) {
+    // CONNECT TO SIZE AND QUANTITY ACTIVITY
+    private void openSizeSelection(String uniformName) {
 
-        Toast.makeText(
-                this,
-                "Selected: " + uniformName,
-                Toast.LENGTH_SHORT
-        ).show();
+        Intent intent = new Intent(
+                UNIFORMCATEGORY_SIZESELECTION.this,
+                UNIFORM_SizeandQuantity.class
+        );
 
+        intent.putExtra("UNIFORM_NAME", uniformName);
+
+        startActivity(intent);
     }
 }

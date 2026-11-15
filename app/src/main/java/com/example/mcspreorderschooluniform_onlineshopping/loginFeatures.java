@@ -1,6 +1,8 @@
+
 package com.example.mcspreorderschooluniform_onlineshopping;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +17,6 @@ public class loginFeatures extends AppCompatActivity {
     Button btnLogin;
     TextView txtForgotPassword, txtRegister;
 
-    // Sample login credentials
     String correctStudentId = "12345";
     String correctPassword = "student123";
 
@@ -24,14 +25,12 @@ public class loginFeatures extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_features2);
 
-        // Connect XML components
         editStudentId = findViewById(R.id.editStudentId);
         editPassword = findViewById(R.id.editPassword);
         btnLogin = findViewById(R.id.btnLogin);
         txtForgotPassword = findViewById(R.id.txtForgotPassword);
         txtRegister = findViewById(R.id.txtRegister);
 
-        // LOGIN BUTTON
         btnLogin.setOnClickListener(v -> {
 
             String studentId = editStudentId.getText().toString().trim();
@@ -56,7 +55,12 @@ public class loginFeatures extends AppCompatActivity {
                         "Login Successful!",
                         Toast.LENGTH_SHORT).show();
 
-                // Add your next Activity here if needed
+                Intent intent = new Intent(
+                        loginFeatures.this,
+                        UNIFORMCATEGORY_SIZESELECTION.class
+                );
+
+                startActivity(intent);
 
             } else {
                 Toast.makeText(loginFeatures.this,
@@ -65,7 +69,6 @@ public class loginFeatures extends AppCompatActivity {
             }
         });
 
-        // FORGOT PASSWORD
         txtForgotPassword.setOnClickListener(v -> {
 
             new AlertDialog.Builder(loginFeatures.this)
@@ -75,13 +78,11 @@ public class loginFeatures extends AppCompatActivity {
                     .show();
         });
 
-        // CREATE ACCOUNT
         txtRegister.setOnClickListener(v -> {
 
             Toast.makeText(loginFeatures.this,
                     "Create Account Clicked",
                     Toast.LENGTH_SHORT).show();
-
         });
     }
 }
